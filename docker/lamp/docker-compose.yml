@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Servicio de Apache con PHP
+  web:
+    image: php:7.4-apache  # Usa una imagen de Apache con PHP 7.4
+    container_name: apache_php
+    ports:
+      - "80:80"  # Expone el puerto 80 al host
+    volumes:
+      - ./html:/var/www/html  # Monta el directorio local ./html en /var/www/html del contenedor
+    depends_on:
+      - db  # Asegura que Apache dependa de MySQL
+  
+  # Servicio de base de datos MySQL
+  db:
+    image: mysql:5.7  # Usa la imagen de MySQL 5.7
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password  # Contraseña de root para MySQL
+      MYSQL_DATABASE: example_db         # Crea una base de datos por defecto
+    volumes:
+      - db_data:/var/lib/mysql  # Persistencia de datos de MySQL
+  
+volumes:
+  db_data:  # Define un volumen para MySQL

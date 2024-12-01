@@ -1,0 +1,24 @@
+services:
+  mysqlmw:
+    container_name: mediawiki1
+    image: mysql
+    ports:
+      - 3310:3306
+    restart: always
+    volumes:
+      - C:/mediawikiDocker/mw_db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: $root_password
+      MYSQL_USER: $sql_user
+      MYSQL_PASSWORD: $password
+      MYSQL_DATABASE: $sql_name
+
+  web:
+    container_name: mediawiki_www
+    image: mediawiki:$VERSION
+    ports:
+      - 89:80
+    restart: always
+    volumes:
+      - C:/mediawikiDocker/mw_imgdata/:/var/www/html/images
+   

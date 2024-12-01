@@ -1,0 +1,192 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Miguel Huarte</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" id="searchForm" onsubmit="event.preventDefault(); searchProjects();">
+                    <input type="text" id="search" placeholder="Buscar proyectos..." onkeyup="searchProjects()">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section id="proyectos" class="container mt-5">
+        <h2>Proyectos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./imagenes/Imagen de WhatsApp 2024-10-13 a las 18.26.40_b474e1b2.jpg" class="card-img-top"
+                        alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">CAMARA PROFESIONAL DE STREAMING</h5>
+                        <p class="card-text">Trabajo como camara en la empresa de Millenium situada en barañain que
+                            se encarga de grabar actuaciones dentro y fuera de navarra. coros, teatros,
+                            conferenias...</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyecto1">Más
+                            información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./imagenes/Imagen de WhatsApp 2024-10-13 a las 18.48.11_b97d146d.jpg" class="card-img-top"
+                        alt="Proyecto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">ENTRENADOR DE FUTBOL PROFESIONAL</h5>
+                        <p class="card-text">Soy la cabeza pensante del futbol club Tchaparros, equipo formado por
+                            jóvenes de una pequeña localidad de navarra (Añorbe). He trabajado en este proyecto
+                            durente 3 años ganando la copa del cao en 2023</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyecto2">Más
+                            información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./imagenes/generic-email-header-1.avif" class="card-img-top" alt="Proyecto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">CREADOR DE CONTENIDO DE VIDEOJUEGOS</h5>
+                        <p class="card-text">Desde hace unos pocos años he empezado a crear contenido de 2 videojuegos:
+                            fifa y rocket league. Estoy todos los viernes y sábados de 17:00 a 20:00 en mi canal de
+                            twich (RHJ Jaurri)
+                        </p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyecto3">Más
+                            información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel1">Proyecto 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Trabajo con cámaras de alta gama como la Sony PXW-Z150 para grabación de eventos en 4K. He
+                            cubierto eventos importantes como conferencias nacionales, festivales de música y obras
+                            teatrales en directo.</p>
+                        <p>Una de las mayores experiencias fue grabar Un concierto de ópera en baluarte, donde se
+                            retransmitió en directo a nivel internacional conmás de 100,000 espectadores. Durante el
+                            proceso, tuve que solucionar problemas técnicos en tiempo real como por ejemplo trabajar
+                            a escasos centimetros del público por falta de espacio generando golpes.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel2">Proyecto 2</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Como entrenador principal del equipo Tchaparros, he implementado una estrategia basada en la
+                            posesión y el juego ofensivo. Utilizamos herramientas de análisis de rendimiento como GPS
+                            trackers para medir el estado físico y el software TacticalPad para estudiar y mejorar las
+                            tácticas del equipo.</p>
+                        <p>Uno de los logros más significativos fue ganar la Copa del torneo del cao de la liga monreal
+                            en 2023. Logramos mantener destacándonos por nuestra defensa sólida y transición rápida al
+                            ataque.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalProyecto3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel3">Proyecto 3</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Actualmente hago streaming en Twitch dos veces por semana, principalmente jugando a FIFA y
+                            Rocket League. Mi canal ha crecido a más de 1,000 seguidores en menos de un año gracias a mi
+                            estilo de juego interactivo y dinámico, donde constantemente estoy involucrando a mi
+                            audiencia en decisiones de juego en tiempo real.</p>
+                        <p>Utilizo OBS Studio para transmitir en alta calidad con overlays personalizados que me
+                            permiten tener una experiencia profesional de streaming. También organizo torneos mensuales
+                            para mi comunidad, con premios y desafíos que atraen a nuevos seguidores constantemente.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Miguel Huarte.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('#searchForm').on('submit', function (e) {
+      const searchTerm = $('#searchInput').val().toLowerCase();
+      if ($('.card').length > 0) {
+        $('.card').each(function () {
+          const projectTitle = $(this).find('.card-title').text().toLowerCase();
+          if (projectTitle.includes(searchTerm)) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      }
+    });
+    function searchProjects() {
+      var input = document.getElementById("search");
+      var filter = input.value.toLowerCase();
+      var projects = document.getElementsByClassName("project-card");
+      var found = false;
+
+      for (var i = 0; i < projects.length; i++) {
+        var projectName = projects[i].getAttribute("data-project-name").toLowerCase();
+        
+        if (projectName.includes(filter)) {
+          projects[i].scrollIntoView({ behavior: "smooth", block: "center" }); 
+          found = true;
+          break;
+        }
+      }
+      if (!found && filter) {
+        console.log("Proyecto no encontrado");
+      }
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  # Servicio de Apache con PHP para Moodle
+  web:
+    image: bitnami/moodle:latest  # Imagen oficial de Moodle de Bitnami (viene con Apache y PHP)
+    container_name: moodle_web
+    ports:
+      - "8080:8080"  # Expone el puerto 8080 en el contenedor al 8080 en tu máquina local
+    volumes:
+      - moodle_data:/bitnami/moodle  # Volumen para almacenar los datos de Moodle
+    environment:
+      - MOODLE_DATABASE_HOST=db:3306  # Conexión con la base de datos
+      - MOODLE_DATABASE_NAME=moodle_db  # Nombre de la base de datos de Moodle
+      - MOODLE_DATABASE_USER=moodle_user  # Usuario de la base de datos
+      - MOODLE_DATABASE_PASSWORD=moodle_password  # Contraseña de la base de datos
+    depends_on:
+      - db  # El servicio web depende de la base de datos
+
+  # Servicio de base de datos MySQL para Moodle
+  db:
+    image: mysql:5.7  # Imagen oficial de MySQL
+    container_name: moodle_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password  # Contraseña del root de MySQL
+      MYSQL_DATABASE: moodle_db  # Base de datos para Moodle
+      MYSQL_USER: moodle_user  # Usuario para Moodle
+      MYSQL_PASSWORD: moodle_password  # Contraseña del usuario Moodle
+    volumes:
+      - db_data:/var/lib/mysql  # Volumen para persistir los datos de MySQL
+
+volumes:
+  moodle_data:  # Volumen para los datos de Moodle
+  db_data:  # Volumen para los datos de MySQL

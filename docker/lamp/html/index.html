@@ -1,0 +1,105 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web Personal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Miguel Huarte</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./proyectos.html">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-5">
+    <section id="home">
+      <h1 class="text-center mb-5">Sobre Mí</h1>
+
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="./imagenes/Imagen de WhatsApp 2024-10-13 a las 18.31.00_470ea644.jpg" alt="Imagen de Perfil"
+            class="rounded-circle img-fluid mb-4">
+        </div>
+        <div class="col-md-8">
+          <p>Hola, soy <strong>Miguel</strong>, un apasionado <strong>administrador de sistemas informáticos y
+              redes</strong> con experiencia en la gestión de infraestructuras tecnológicas, seguridad y
+            optimización de sistemas empresariales. Me esfuerzo por mantenerme al día con las últimas
+            tecnologías y mejorar continuamente los entornos IT en los que trabajo.</p>
+
+          <h4>Habilidades Técnicas</h4>
+          <ul>
+            <li>Gestión de servidores (Windows, Linux)</li>
+            <li>Configuración y mantenimiento de redes empresariales</li>
+            <li>Soluciones de virtualización (VMware, Hyper-V)</li>
+            <li>Administración de bases de datos y copias de seguridad</li>
+            <li>Seguridad informática y administración de firewalls</li>
+          </ul>
+
+          <h4>Habilidades Personales</h4>
+          <p>Soy una persona <strong>trabajadora</strong>, <strong>social</strong> y con gran capacidad de
+            adaptación. Me encanta el <strong>deporte</strong> y mantengo una mentalidad positiva en todo lo
+            que hago, buscando siempre el equilibrio entre el trabajo y el disfrute.</p>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-4 text-center">
+          <h5>Idiomas</h5>
+          <p>Inglés: <strong>B2</strong></p>
+          <p>Francés: <strong>B1</strong></p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5>Habilidades Complementarias</h5>
+          <p>Permiso de conducción <strong>B</strong></p>
+          <p>Experiencia trabajando en equipo y bajo presión</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5>Aficiones</h5>
+          <p>Deporte, tecnología, viajes, múscia</p>
+          <p>Entusiasta de nuevas experiencias</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Miguel Huarte.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $('a.nav-link').on('click', function (e) {
+        const target = $(this).attr('href');
+        $('section').hide();
+        $(target).show();
+      });
+
+      $('section').hide();
+      $('#home').show();
+    });
+    
+    
+  </script>
+</body>
+
+</html>
